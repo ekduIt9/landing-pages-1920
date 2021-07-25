@@ -17,7 +17,7 @@ body {min-height: 200vh; margin: 0; }
 .wrapper .horizontal-line:after {position: absolute; content: ""; left: 66.666666%; top: 0; width: 2px; height: 100%; background: #000000; }
 .text-around {position: absolute; top: 0; left: 0; }
 .star-top-left {position: absolute; top: 3%; left: 2%; padding: 0 10px 10px 0; }
-.star-top-right {position: absolute; top: 3%; right: 2%; padding: 0 0 10px 10px; }
+.star-top-right {position: absolute; top: 4.2%; right: 2.4%; padding: 0 0 10px 10px; }
 .star-bottom-left {position: absolute; bottom: 3%; left: 2%; padding: 10px 10px 0 0; }
 .star-bottom-right {position: absolute; bottom: 3%; right: 2%; padding: 10px 0 0 10px; }
 svg.text-around {fill:none; background: #000; }
