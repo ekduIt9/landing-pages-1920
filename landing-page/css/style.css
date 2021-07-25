@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body { padding-bottom: 80px; }
+body, a{ background: #000; margin: 0; color: #fff; text-decoration: none; font-size: 14px;}
+ul,li, h1, h2, h3, h4, h5, h6, p{padding: 0; margin: 0;}
+li{list-style: none;}
+
+body {min-height: 200vh; margin: 0; }
+.wrapper {position: relative; padding: 6.4%; }
+.star-top-left, .star-top-right, .star-bottom-left, .star-bottom-right {z-index: 5; background: #000; width: 2.5%; }
+.wrapper .imagea img {width: 100%; height: auto; }
+.imagea {position: relative; }
+.imagea .overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0 , 0 , 0.5); }
+.wrapper .vertical-line:before {position: absolute; content: ""; top: 33.333333%; left: 0; width: 100%; height: 2px; background: #000000; }
+.wrapper .vertical-line:after {position: absolute; content: ""; top: 66.666666%; left: 0; width: 100%; height: 2px; background: #000000; }
+.wrapper .horizontal-line:before {position: absolute; content: ""; left: 33.333333%; top: 0; width: 2px; height: 100%; background: #000000; }
+.wrapper .horizontal-line:after {position: absolute; content: ""; left: 66.666666%; top: 0; width: 2px; height: 100%; background: #000000; }
+.text-around {position: absolute; top: 0; left: 0; }
+.star-top-left {position: absolute; top: 4.3%; left: 2.4%; padding: 0 10px 10px 0; }
+.star-top-right {position: absolute; top: 4.3%; right: 2.4%; padding: 0 0 10px 10px; }
+.star-bottom-left {position: absolute; bottom: 4.3%; left: 2.4%; padding: 10px 10px 0 0; }
+.star-bottom-right {position: absolute; bottom: 4.3%; right: 2.4%; padding: 10px 0 0 10px; }
+svg.text-around {fill:none; background: #000; }
+.tspan-bold {font-weight: 700; }
+.tspan-logo {letter-spacing: 1.5px; }
+.image-logo {position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); }
+.image-logo textPath {font-size: 0.8rem; }
+.icon {position: absolute; bottom: 4%; left: 50%; transform: translateX(-50%); }
+.icon .pin {animation-name: scroll; animation-duration: 2.2s; animation-timing-function: cubic-bezier(.15,.41,.69,.94); animation-iteration-count: infinite; }
+text {fill: #FFCC00; }
+textPath {font-family: Eurocine; font-style: normal; font-weight: normal; font-size: 0.4rem; text-transform: uppercase; color: #FFCC00; }
+svg.text-around-circle {animation: rotating 8s linear infinite; }
+.circle img {position: absolute; border-radius: 50%; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); }
+textPath::selection {background: none; }
+@keyframes rotating {
+    from {transform: rotate(0deg); }
+    to {transform: rotate(-360deg); }
+}
+@keyframes scroll {
+    0% { opacity: 1; }
+    10% { transform: translateY(0); opacity: 1; }
+    90% { transform: translateY(32px); opacity: 1;}
+    100% { opacity: 0; }
+}
+@media screen and (max-width: 460px) {
+    .wrapper {padding: 8.5%; }
+    .wrapper .imagea img {min-height: 571px; object-fit: cover; border-radius: 56px; }
+    .star-top-left {top: 2.5%; left: 3.3%; }
+    .star-top-right {top: 2.5%; right: 3.2%; }
+    .star-bottom-left {left: 3.3%; bottom: 2.9%; }
+    .star-bottom-right {bottom: 2.9%; right: 3.2%; }
+    .star-top-left, .star-top-right, .star-bottom-left, .star-bottom-right {padding: 0; }
+    textPath {font-size: 0.6rem; }
+    svg.text-around-circle {width: 170px; }
+    .circle img {width: 71px; height: 48px; }
+}
+
+.col-2{padding: 0; border-left: 1px solid #222; border-top: 1px solid #222;}
+.page-section .box-title{ position: relative; }
+.page-section .button-link{ position: absolute; right: 40px; top: 50%; margin-top: -32px; }
+.page-section .button-link:hover{ cursor: pointer; }
+
+.sticky {position: fixed; top: 0; width: 100%; }
+.sticky .list-menu{overflow-y: scroll; padding-bottom: 50px; margin-top: 200px; height: 735px; }
+.sticky .list-menu::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; }
+.sticky .list-menu::-webkit-scrollbar {width: 0px; background-color: #F5F5F5; }
+.sticky .list-menu::-webkit-scrollbar-thumb {background-color: #000000; }
+.sticky .first-menu{ position: fixed; left: 0; top: 0; width: 16.798% !important; }
+
+.modal::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; }
+.modal::-webkit-scrollbar {width: 0px; background-color: #F5F5F5; }
+.modal::-webkit-scrollbar-thumb {background-color: #000000; }
+
+.main-wrapper{border-top: 1px solid #ffcc00; display: flex; flex-flow: wrap;}
+.main-wrapper>div{display: flex;}
+
+.main-wrapper .box-menu{ width: 16.798%; background: #111; max-width: 100%; float: left;}
+.main-wrapper .box-menu li.first-menu{padding: 0; opacity: 1 !important;}
+.main-wrapper .box-menu li.first-menu img{ width: 100%; }
+.main-wrapper .box-menu li{ max-width: 100%; padding: 24px; display: table; width: 100%; border-bottom: 1px solid #222;}
+.main-wrapper .box-menu li.active {color: white; background-color: #000; position: relative; }
+.main-wrapper .box-menu li.active a{color: #ffcc00; }
+.main-wrapper .box-menu li.active:before{ position: absolute; content: ""; background: url('../image/arrow.png') no-repeat center; width: 30px; height: 30px; right: 40px; top: 44%; }
+.main-wrapper .box-menu li a{background: none; text-decoration: none; display: table-cell; vertical-align: middle; font-size: 28px; font-weight: 700;}
+.main-wrapper .box-menu li a:hover{ color: #fff; }
+/*.main-wrapper .box-menu li.menu-item{height: 258px; }*/
+.main-wrapper .box-menu li.menu-copyRight{font-size: 12px; color: #666; font-family: "IBM Plex Mono", monospace;}
+
+.main-wrapper .wrapper-info{border-left: 1px solid #ffcc00; width: 83.202%; display: block; max-width: 100%; position: absolute; right: 0; padding-bottom: 80px;}
+.main-wrapper .wrapper-info.active{ position: absolute; right: 0; width: 83.202%; }
+
+.main-wrapper .wrapper-info .box-aboutUs{ width: 100%;}
+.main-wrapper .wrapper-info .box-aboutUs .box-title .title{padding: 0 40px; height: 160px; line-height: 160px; color: #ffcc00; font-size: 56px; font-weight: 700; border-bottom: 1px solid #222; max-width: 100%;}
+.main-wrapper .wrapper-info .box-aboutUs .box-content{background: url('../image/about.jpg') no-repeat right center; height: 560px; overflow: hidden;}
+.main-wrapper .wrapper-info .box-aboutUs .box-content .content{ width: 560px; font-family: "IBM Plex Mono"; margin: 40px 0 0 40px; padding-right: 40px; line-height: 24px; font-size: 20px;}
+
+.main-wrapper .wrapper-info .box-team{ display: flow-root; }
+.main-wrapper .wrapper-info .box-team .box-title{border-bottom: 1px solid #ffcc00; border-top: 1px solid #222; display: flex;}
+.main-wrapper .wrapper-info .box-team .box-title .title{width: calc(50% - 1px); position: relative; float: left; border-right: 1px solid #222; height: 96px; line-height: 96px; font-weight: 700; padding: 0 40px;}
+.main-wrapper .wrapper-info .box-team .box-title .title.active{ background: #ffcc00; color: #fff;}
+.main-wrapper .wrapper-info .box-team .box-title .title:hover{ cursor: pointer; }
+.main-wrapper .wrapper-info .box-team .box-title .title:before {position: absolute; content: "";float: right;transition: all 0.5s; height: 15px; width: 15px; background: url('../image/down.png') no-repeat center; top: 40%; right: 40px;}
+.main-wrapper .wrapper-info .box-team .box-title .title.active:before {-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); transform: rotate(180deg); }
+.main-wrapper .wrapper-info .box-team .box-content .mission{padding: 40px; background: url('../image/mission.jpg') no-repeat center bottom; width: calc(50% - 1px); float: left; border-right: 1px solid #222; height: 800px; font-size: 20px; line-height: 25px; font-family: "IBM Plex Mono"; }
+.main-wrapper .wrapper-info .box-team .box-content .mission.vision{  background: url('../image/vision.jpg') no-repeat center bottom; }
+.main-wrapper .wrapper-info .box-team .box-content .mission .mission-title{font-size: 32px; line-height: 32px; font-weight: 700; color: #ffcc00; padding-bottom: 15px;}
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .title{padding: 40px 40px 0 40px; font-size: 32px; line-height: 32px; color: #ffcc00; font-weight: 700;}
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .desc{ padding: 10px 40px 40px 40px; font-size: 20px; line-height: 24px; font-family: "IBM Plex Mono";}
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .title-core,
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .title-crew,
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .title-post{ width: 100%; max-width: 100%; background: url('../image/title.jpg') top left; height: 40px; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .title-crew{ background: url('../image/Titles.jpg') top left !important; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .title-post{ background: url('../image/Titles (1).jpg') top left !important; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item{display: flex;}
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item.list-post{ border-bottom: 1px solid #222; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item .item img{ width: 100%; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item .item .info{padding: 24px;}
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item .item .info .name{ line-height: 17px; color: #ffcc00; font-weight: 700; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item .item .info .position{ font-size: 13px; line-height: 16px; font-family: "IBM Plex Mono"; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .right-content img{ width: 100%; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .right-content .info{padding: 24px;}
+.main-wrapper .wrapper-info .box-team .box-content .content-team .right-content .info .name{ font-size: 28px; line-height: 34px; color: #ffcc00; font-weight: 700; }
+.main-wrapper .wrapper-info .box-team .box-content .content-team .right-content .info .position{ font-size: 26px; line-height: 34px; font-family: "IBM Plex Mono"; }
+.main-wrapper .wrapper-info .box-team .col-still{border-right: 1px solid #222; border-left: 1px solid #222; text-align: center; font-size: 13px; line-height: 16px; color: #fff; font-family: "IBM Plex Mono"; padding: 129px 0; }
+
+
+.main-wrapper .wrapper-info .box-partner { display: flow-root; border-bottom: 1px solid #222; }
+.main-wrapper .wrapper-info .box-partner .box-title .title{ font-size: 56px; line-height: 56px; padding: 40px; color: #ffcc00; font-weight: 700; border-bottom: 1px solid #222; }
+.main-wrapper .wrapper-info .box-partner .desc{ font-size: 20px; line-height: 28px; padding: 40px; font-family: "IBM Plex Mono"; }
+.main-wrapper .wrapper-info .box-partner .desc .text{ line-height: 24px; padding-top: 10px; }
+.main-wrapper .wrapper-info .box-partner .list-item{ border-right: 1px solid #222; display: flex; flex-flow: wrap; }
+.main-wrapper .wrapper-info .box-partner .list-item .item{ width: calc(12.5%); float: left; border-top: 1px solid #222; border-left: 1px solid #222; display: block; }
+.main-wrapper .wrapper-info .box-partner .list-item .item .info{ padding: 24px; font-size: 14px; line-height: 17px; color: #ffcc00; }
+.main-wrapper .wrapper-info .box-partner .list-item .item .info .position { font-size: 13px; line-height: 16px; color: #fff; font-family: "IBM Plex Mono"; padding-top: 5px; }
+.main-wrapper .wrapper-info .box-partner .list-item .item img{ width: 100%; }
+.main-wrapper .wrapper-info .box-partner .item-still{ display: flow-root; text-align: center; font-size: 13px; line-height: 16px; color: #fff; font-family: "IBM Plex Mono"; padding: 135px 0; border-top: 1px solid #222; border-left: 1px solid #222; }
+
+.main-wrapper .wrapper-info .box-ourClient { display: flow-root; }
+.main-wrapper .wrapper-info .box-ourClient img{ width: 100%; }
+.main-wrapper .wrapper-info .box-ourClient .box-content{ display: flow-root; }
+.main-wrapper .wrapper-info .box-ourClient .box-title{ padding: 40px; font-family: "IBM Plex Mono"; font-size: 20px; line-height: 24px; }
+.main-wrapper .wrapper-info .box-ourClient .box-title .title{ line-height: 28px; }
+
+.main-wrapper .wrapper-info .box-ourWorks{position: relative; padding-bottom: 80px; display: flow-root;}
+.main-wrapper .wrapper-info .box-ourWorks .box-title .title{height: 400px; padding-top: 128px; text-align: center; font-size: 72px; line-height: 72px; color: #ffcc00; background: url('../image/our-works.jpg') no-repeat center center; font-weight: 700; }
+.main-wrapper .wrapper-info .box-ourWorks .box-content{ display: flow-root; border-bottom: 1px solid #222; }
+.main-wrapper .wrapper-info .box-ourWorks .col-2{ display: none; }
+.main-wrapper .wrapper-info .box-ourWorks .item img{width: 100%;}
+.main-wrapper .wrapper-info .box-ourWorks .item{ padding: 24px; }
+.main-wrapper .wrapper-info .box-ourWorks .item:hover{ background: #111; transition: all 0.2s ease-in-out 0s; }
+.main-wrapper .wrapper-info .box-ourWorks .item:hover .image .play{ opacity: 1; }
+.main-wrapper .wrapper-info .box-ourWorks .item .image{ position: relative; }
+.main-wrapper .wrapper-info .box-ourWorks .item .image .play{ position: absolute; right: 15px; bottom: 15px; width: 64px; height: 64px; opacity: 0; transition: all 0.2s ease-in-out 0s; }
+.main-wrapper .wrapper-info .box-ourWorks .item .info{ padding: 32px 8px 8px 8px; }
+.main-wrapper .wrapper-info .box-ourWorks .item .info{ font-size: 20px; line-height: 24px; font-family: "IBM Plex Mono"; }
+.main-wrapper .wrapper-info .box-ourWorks .item .info .title{ line-height: 28px; font-weight: 700; }
+.main-wrapper .wrapper-info .box-ourWorks .item .info .client span{font-size: 12px; color: #999;}
+.main-wrapper .wrapper-info .box-ourWorks .view-more { z-index: 100; max-width: 100%; position: absolute; width: 100%; text-align: center; background: #111; bottom: 0; right: 0; padding: 28px; font-size: 20px; line-height: 24px; font-family: "IBM Plex Mono"; }
+.main-wrapper .wrapper-info .box-ourWorks .view-more:hover{cursor: pointer;}
+.main-wrapper .wrapper-info .box-ourWorks .view-more span{padding: 0 5px;}
+
+.main-wrapper .wrapper-info .box-contact { border-top: 1px solid #ffcc00; }
+.main-wrapper .wrapper-info .box-contact .box-content{ display: flex; flex-flow: wrap; }
+.main-wrapper .wrapper-info .box-contact .box-content>div{ display: flex; }
+.main-wrapper .wrapper-info .box-contact .box-title .title{ padding: 50px 40px; font-size: 56px; font-weight: 700; color: #ffcc00; }
+.main-wrapper .wrapper-info .box-contact .box-content .item{ padding: 40px; font-size: 20px; line-height: 28px; font-family: "IBM Plex Mono"; }
+.main-wrapper .wrapper-info .box-contact .box-content .item .desc{ line-height: 24px; padding-top: 10px; }
+
+.main-wrapper .wrapper-info.active .box-contact{ margin-bottom: 80px; }
+
+.main-wrapper .wrapper-info .scroll-to-top{ position: fixed; width: 83.202%; max-width: 100%; opacity: 0; transition: all 0.4s ease-in-out 0s; text-align: center; background: #000; bottom: 0; right: 0; padding: 28px; font-size: 20px; line-height: 24px; font-family: "IBM Plex Mono"; border-top: 1px solid #ffcc00; border-left: 1px solid #ffcc00; }
+.main-wrapper .wrapper-info .scroll-to-top:hover{cursor: pointer;}
+.main-wrapper .wrapper-info .scroll-to-top span{padding: 0 5px;}
+
+.accordion-title.active-title {background-color: #04b8d8; color: #fff; }
+
+.accordion-content {display: none; }
+
+
+
+@media screen and (max-width: 1600px){
+    .sticky .list-menu{ margin-top: 165px; }
+}
+
+@media screen and (max-width: 1440px){
+    .sticky .list-menu{ margin-top: 145px; }
+    .main-wrapper .box-menu li{ padding: 15px; }
+    .main-wrapper .box-menu li.active:before{ right: 10px; }
+
+    .main-wrapper .wrapper-info .box-partner .item-still{ padding: 115px 0; }
+}
+
+@media screen and (max-width: 1250px){
+    .sticky .list-menu{ margin-top: 129px; }
+}
+
+@media screen and (max-width: 1140px){
+    .main-wrapper .box-menu li.active:before { display: none; }
+}
+
+@media screen and (max-width: 991px){
+    .page-section .button-link{ width: 40px; height: 40px; right: 20px; margin-top: -20px; }
+    .page-section .button-link img{ width: 100%; }
+
+    .main-wrapper{border: 1px solid #ffcc00; display: flow-root;}
+    .main-wrapper .wrapper-info{ border: 0; }
+
+	.main-wrapper .box-menu, .main-wrapper .wrapper-info, .main-wrapper .wrapper-info.active{ width: 100%; }
+
+    .main-wrapper .wrapper-info .box-team .box-content .accordion-content{padding: 8px; }
+    .main-wrapper .wrapper-info .box-team .box-content .mission{ width: 100%; height: 480px; font-size: 14px; line-height: 20px; border-radius: 5px; padding: 24px 16px; border: 1px solid #222; }
+    .main-wrapper .wrapper-info .box-team .box-content .mission .mission-title{ font-size: 20px; line-height: 20px; }
+    .main-wrapper .wrapper-info .box-team .box-content .content-team .left-content{ border: 1px solid #222; border-radius: 0 0 5px 5px ; }
+    .main-wrapper .wrapper-info .box-team .box-content .content-team .right-content{ border: 1px solid #222; border-radius: 5px 5px 0 0; }
+    .main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .title{ padding: 24px 16px 0 16px; font-size: 20px; line-height: 20px; }
+    .main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .desc{ padding: 10px 16px 24px 16px; font-size: 14px; line-height: 20px; }
+    .main-wrapper .wrapper-info .box-team .box-content .content-team .left-content, .main-wrapper .wrapper-info .box-team .box-content .content-team .right-content{ width: 100%; float: none; }
+    .main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item{ display: flow-root; }
+    .main-wrapper .wrapper-info .box-team .box-content .content-team .left-content .list-item .item .info{ padding: 11px; }
+    .main-wrapper .wrapper-info .box-team .col-still{ padding: 106px 0; }
+
+    .main-wrapper .wrapper-info .box-aboutUs{ padding-bottom: 40px; }
+    .main-wrapper .wrapper-info .box-aboutUs .box-title .title{ padding: 28px; height: auto; line-height: 32px; font-size: 32px; }
+    .main-wrapper .wrapper-info .box-aboutUs .box-content{ background: none; height: auto; }
+    .main-wrapper .wrapper-info .box-aboutUs .box-content .image img{ width: 100%; }
+    .main-wrapper .wrapper-info .box-aboutUs .box-content .content{ width: 100%; padding: 15px; margin: 0; }
+
+    .main-wrapper .wrapper-info .box-partner .box-title .title{ padding: 24px 16px; font-size: 32px; line-height: 32px; }
+    .main-wrapper .wrapper-info .box-partner .desc{ padding: 24px 16px; font-size: 16px; line-height: 16px; }
+    .main-wrapper .wrapper-info .box-partner .desc .text{ font-size: 14px; line-height: 20px; }
+	.main-wrapper .wrapper-info .box-partner .list-item .item{ width: calc(25% - 1px); }
+
+    .main-wrapper .wrapper-info .box-ourClient .box-title{ padding: 24px 16px; font-size: 14px; line-height: 20px; }
+    .main-wrapper .wrapper-info .box-ourClient .title{ font-size: 16px; line-height: 16px;; }
+
+	.main-wrapper .wrapper-info .box-ourWorks .box-content{ display: block; }
+    .main-wrapper .wrapper-info .box-ourWorks .item{ padding: 16px; }
+    .main-wrapper .wrapper-info .box-ourWorks .item .info{ padding: 20px 4px 4px 4px; font-size: 16px; line-height: 16px; }
+    .main-wrapper .wrapper-info .box-ourWorks .item .info .client{ font-size: 14px; line-height: 20px; }
+    .main-wrapper .wrapper-info .box-ourWorks .item .info .client span{ font-size: 10px; line-height: 10px; }
+    .main-wrapper .wrapper-info .box-ourWorks .view-more{ padding: 16px; font-size: 16px; line-height: 24px; border-left: 0; }
+
+    .main-wrapper .wrapper-info .box-contact .box-title .title{ font-size: 32px; line-height: 32px; padding: 28px 16px; }
+    .main-wrapper .wrapper-info .box-contact .box-content .item{ padding: 16px; font-size: 16px; line-height: 16px; }
+    .main-wrapper .wrapper-info .box-contact .box-content .item .desc{ font-size: 14px; line-height: 20px; }
+
+    .main-wrapper .wrapper-info .scroll-to-top, .main-wrapper .wrapper-info .box-ourWorks .view-more{width: 100%;}
+
+    .accordion-content{ background: #000; width: 95%; left: 2.5%; top: 10%; border-radius: 5px; }
+
+    .close-popup{ text-align: center; display: inline-block; padding: 20px 0 40px; width: 100%; }
+    .close-popup:hover{ cursor: pointer; }
+
+    .box-menu-mobile{ z-index: 1000; background: #ffcc00; border-radius: 5px; position: fixed; bottom: 1%; width: 95%; left: 2.5%; }
+    .box-menu-mobile li, .box-menu-mobile .first-menu img{ width: 100%; border-radius: 5px; }
+    .box-menu-mobile li { padding: 14px 16px; text-transform: uppercase; font-weight: 700; border-radius: 0; border-top: 1px solid #000; }
+    .box-menu-mobile li a{ background: none; font-size: 20px; line-height: 28px; color: #000; text-decoration: none; width: 100%; display: flow-root; position: relative; }
+    .box-menu-mobile li a:before{ position: absolute; content: ""; width: 30px; height: 30px; right: 16px; top: 0; background: url('../image/arrow-right.png') no-repeat center; }
+    .box-menu-mobile li.go_box.active a{ color: #fff; }
+    .box-menu-mobile li.go_box.active a:before{ background: none; }
+    .box-menu-mobile li.first-menu{ padding: 0; }
+    .box-menu-mobile li.first-menu a:before{ background: none; }
+    .box-menu-mobile li.last-menu a{ color: #fff; font-size: 16px; line-height: 24px; font-weight: 400; }
+    .box-menu-mobile li.last-menu a span{ padding-right: 10px; }
+    .box-menu-mobile li.last-menu a:before{ background: url('../image/arrow down.png') no-repeat center center; }
+    .box-menu-mobile .disappear{ display: none; }
+    .box-menu-mobile .show li a:before{ background: url('../image/up.png') no-repeat center !important; }
+
+    .modal{ z-index: 100000; }
+
+
+} 
+
+@media screen and (max-width: 430px){
+    .main-wrapper .wrapper-info .box-team .box-title .title{ height: auto; font-size: 16px; line-height: 24px; padding: 12px;}
+    .main-wrapper .wrapper-info .box-team .box-title .title:before{ right: 20px; }
+}
