@@ -140,6 +140,29 @@ $(function () {
     });
 });
 
+function copyToClipboard(txt) {
+    txt = document.createTextNode(txt);
+    var m = document;
+    var w = window;
+    var b = m.body;
+    b.appendChild(txt);
+    if (b.createTextRange) {
+        var d = b.createTextRange();
+        d.moveToElementText(txt);
+        d.select();
+        m.execCommand('copy');
+    } else {
+        var d = m.createRange();
+        var g = w.getSelection;
+        d.selectNodeContents(txt);
+        g().removeAllRanges();
+        g().addRange(d);
+        m.execCommand('copy');
+        g().removeAllRanges();
+    }
+    txt.remove();
+}
+
 $(document).ready(function(){
     $(window).scroll(function() {
         var scrollDistance = $(window).scrollTop() - 450;
@@ -185,14 +208,8 @@ $(document).ready(function(){
     });
     $(".disappear a").click(function(){
         $(".disappear").slideToggle();
-        $('.disappear').removeClass('hide');
         $('.box-menu-mobile .show-up').removeClass('hide');
         $('.box-menu-mobile .show-up').addClass('show');
-    });
-
-    $("body").click(function(){
-        console.log('tiennv')
-        $(".box-menu-mobile .disappear").slideDown();
     });
 
     $(".accordion-title").click(function () {
@@ -208,6 +225,22 @@ $(document).ready(function(){
         console.log($(this).text())
         $('.show-up').find('a').text($(this).text())
     })
+
+    var logoHeight = $('.main-wrapper .box-menu li.first-menu ').height();
+    var heightMain = $(window).height();
+    var heightMenu = (heightMain - logoHeight)/3;
+    $( ".main-wrapper .box-menu li.item" ).css({ height: heightMenu +'px' })
+    $( ".box-aboutUs .box-title .button-link" ).append("<span class='hidden copy-link'>"+ $(location).attr("href") +"#box-aboutUs</span>");
+    $( ".box-partner .box-title .button-link" ).append("<span class='hidden copy-link'>"+ $(location).attr("href") +"#box-partner</span>");
+    $( ".box-ourWorks .box-title .button-link" ).append("<span class='hidden copy-link'>"+ $(location).attr("href") +"#box-ourWorks</span>");
+    $( ".box-contact .box-title .button-link" ).append("<span class='hidden copy-link'>"+ $(location).attr("href") +"#box-contact</span>");
+
+    $('.button-link').click(function(){
+        copyToClipboard($(this).find('.copy-link').text());
+        $(".copied").text("Copied to clipboard").fadeOut(1200);
+    })
+
+
 });
 
 
@@ -224,5 +257,7 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
 
 

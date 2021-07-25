@@ -55,12 +55,13 @@ textPath::selection {background: none; }
     .circle img {width: 71px; height: 48px; }
 }
 
-
-
 .col-2{padding: 0; border-left: 1px solid #222; border-top: 1px solid #222;}
+.page-section .box-title{ position: relative; }
+.page-section .button-link{ position: absolute; right: 40px; top: 50%; margin-top: -32px; }
+.page-section .button-link:hover{ cursor: pointer; }
 
 .sticky {position: fixed; top: 0; width: 100%; }
-.sticky .list-menu{overflow-y: scroll; padding-bottom: 50px; margin-top: 200px; height: 700px; }
+.sticky .list-menu{overflow-y: scroll; padding-bottom: 50px; margin-top: 200px; height: 735px; }
 .sticky .list-menu::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; }
 .sticky .list-menu::-webkit-scrollbar {width: 0px; background-color: #F5F5F5; }
 .sticky .list-menu::-webkit-scrollbar-thumb {background-color: #000000; }
@@ -82,7 +83,7 @@ textPath::selection {background: none; }
 .main-wrapper .box-menu li.active:before{ position: absolute; content: ""; background: url('../image/arrow.png') no-repeat center; width: 30px; height: 30px; right: 40px; top: 44%; }
 .main-wrapper .box-menu li a{background: none; text-decoration: none; display: table-cell; vertical-align: middle; font-size: 28px; font-weight: 700;}
 .main-wrapper .box-menu li a:hover{ color: #fff; }
-.main-wrapper .box-menu li.menu-item{height: 258px; }
+/*.main-wrapper .box-menu li.menu-item{height: 258px; }*/
 .main-wrapper .box-menu li.menu-copyRight{font-size: 12px; color: #666; font-family: "IBM Plex Mono", monospace;}
 
 .main-wrapper .wrapper-info{border-left: 1px solid #ffcc00; width: 83.202%; display: block; max-width: 100%; position: absolute; right: 0; padding-bottom: 80px;}
@@ -94,7 +95,7 @@ textPath::selection {background: none; }
 .main-wrapper .wrapper-info .box-aboutUs .box-content .content{ width: 560px; font-family: "IBM Plex Mono"; margin: 40px 0 0 40px; padding-right: 40px; line-height: 24px; font-size: 20px;}
 
 .main-wrapper .wrapper-info .box-team{ display: flow-root; }
-.main-wrapper .wrapper-info .box-team .box-title{border-bottom: 1px solid #ffcc00; display: flex;}
+.main-wrapper .wrapper-info .box-team .box-title{border-bottom: 1px solid #ffcc00; border-top: 1px solid #222; display: flex;}
 .main-wrapper .wrapper-info .box-team .box-title .title{width: calc(50% - 1px); position: relative; float: left; border-right: 1px solid #222; height: 96px; line-height: 96px; font-weight: 700; padding: 0 40px;}
 .main-wrapper .wrapper-info .box-team .box-title .title.active{ background: #ffcc00; color: #fff;}
 .main-wrapper .wrapper-info .box-team .box-title .title:hover{ cursor: pointer; }
@@ -124,7 +125,7 @@ textPath::selection {background: none; }
 
 
 .main-wrapper .wrapper-info .box-partner { display: flow-root; border-bottom: 1px solid #222; }
-.main-wrapper .wrapper-info .box-partner .box-title{ font-size: 56px; line-height: 56px; padding: 40px; color: #ffcc00; font-weight: 700; border-bottom: 1px solid #222; }
+.main-wrapper .wrapper-info .box-partner .box-title .title{ font-size: 56px; line-height: 56px; padding: 40px; color: #ffcc00; font-weight: 700; border-bottom: 1px solid #222; }
 .main-wrapper .wrapper-info .box-partner .desc{ font-size: 20px; line-height: 28px; padding: 40px; font-family: "IBM Plex Mono"; }
 .main-wrapper .wrapper-info .box-partner .desc .text{ line-height: 24px; padding-top: 10px; }
 .main-wrapper .wrapper-info .box-partner .list-item{ border-right: 1px solid #222; display: flow-root; }
@@ -141,7 +142,8 @@ textPath::selection {background: none; }
 .main-wrapper .wrapper-info .box-ourClient .box-title .title{ line-height: 28px; }
 
 .main-wrapper .wrapper-info .box-ourWorks{position: relative; padding-bottom: 80px; display: flow-root;}
-.main-wrapper .wrapper-info .box-ourWorks .box-title{height: 400px; padding-top: 128px; text-align: center; font-size: 72px; line-height: 72px; color: #ffcc00; background: url('../image/our-works.jpg') no-repeat center center; font-weight: 700; }
+.main-wrapper .wrapper-info .box-ourWorks .box-title .title{height: 400px; padding-top: 128px; text-align: center; font-size: 72px; line-height: 72px; color: #ffcc00; background: url('../image/our-works.jpg') no-repeat center center; font-weight: 700; }
+.main-wrapper .wrapper-info .box-ourWorks .box-content{ display: flow-root; border-bottom: 1px solid #222; }
 .main-wrapper .wrapper-info .box-ourWorks .col-2{ display: none; }
 .main-wrapper .wrapper-info .box-ourWorks .item img{width: 100%;}
 .main-wrapper .wrapper-info .box-ourWorks .item{ padding: 24px; }
@@ -153,14 +155,14 @@ textPath::selection {background: none; }
 .main-wrapper .wrapper-info .box-ourWorks .item .info{ font-size: 20px; line-height: 24px; font-family: "IBM Plex Mono"; }
 .main-wrapper .wrapper-info .box-ourWorks .item .info .title{ line-height: 28px; font-weight: 700; }
 .main-wrapper .wrapper-info .box-ourWorks .item .info .client span{font-size: 12px; color: #999;}
-.main-wrapper .wrapper-info .box-ourWorks .view-more { z-index: 100; max-width: 100%; position: absolute; width: 100%; text-align: center; background: #111; bottom: 0; right: 0; padding: 28px; font-size: 20px; line-height: 24px; font-family: "IBM Plex Mono"; border-left: 1px solid #ffcc00; }
+.main-wrapper .wrapper-info .box-ourWorks .view-more { z-index: 100; max-width: 100%; position: absolute; width: 100%; text-align: center; background: #111; bottom: 0; right: 0; padding: 28px; font-size: 20px; line-height: 24px; font-family: "IBM Plex Mono"; }
 .main-wrapper .wrapper-info .box-ourWorks .view-more:hover{cursor: pointer;}
 .main-wrapper .wrapper-info .box-ourWorks .view-more span{padding: 0 5px;}
 
 .main-wrapper .wrapper-info .box-contact { border-top: 1px solid #ffcc00; }
 .main-wrapper .wrapper-info .box-contact .box-content{ display: flex; flex-flow: wrap; }
 .main-wrapper .wrapper-info .box-contact .box-content>div{ display: flex; }
-.main-wrapper .wrapper-info .box-contact .box-title{ padding: 50px 40px; font-size: 56px; font-weight: 700; color: #ffcc00; }
+.main-wrapper .wrapper-info .box-contact .box-title .title{ padding: 50px 40px; font-size: 56px; font-weight: 700; color: #ffcc00; }
 .main-wrapper .wrapper-info .box-contact .box-content .item{ padding: 40px; font-size: 20px; line-height: 28px; font-family: "IBM Plex Mono"; }
 .main-wrapper .wrapper-info .box-contact .box-content .item .desc{ line-height: 24px; padding-top: 10px; }
 
@@ -182,18 +184,30 @@ textPath::selection {background: none; }
 
 @media screen and (max-width: 1440px){
     .sticky .list-menu{ margin-top: 145px; }
+    .main-wrapper .box-menu li{ padding: 15px; }
+    .main-wrapper .box-menu li.active:before{ right: 10px; }
+
+    .main-wrapper .wrapper-info .box-partner .item-still{ padding: 115px 0; }
 }
 
 @media screen and (max-width: 1250px){
     .sticky .list-menu{ margin-top: 129px; }
 }
 
+@media screen and (max-width: 1140px){
+    .main-wrapper .box-menu li.active:before { display: none; }
+}
+
 @media screen and (max-width: 991px){
+    .page-section .button-link{ width: 40px; height: 40px; right: 20px; margin-top: -20px; }
+    .page-section .button-link img{ width: 100%; }
+
     .main-wrapper{border: 1px solid #ffcc00; display: flow-root;}
+    .main-wrapper .wrapper-info{ border: 0; }
 
 	.main-wrapper .box-menu, .main-wrapper .wrapper-info, .main-wrapper .wrapper-info.active{ width: 100%; }
 
-    .main-wrapper .wrapper-info .box-team .box-content{padding: 8px;}
+    .main-wrapper .wrapper-info .box-team .box-content .accordion-content{padding: 8px; }
     .main-wrapper .wrapper-info .box-team .box-content .mission{ width: 100%; height: 480px; font-size: 14px; line-height: 20px; border-radius: 5px; padding: 24px 16px; border: 1px solid #222; }
     .main-wrapper .wrapper-info .box-team .box-content .mission .mission-title{ font-size: 20px; line-height: 20px; }
     .main-wrapper .wrapper-info .box-team .box-content .content-team .left-content{ border: 1px solid #222; border-radius: 0 0 5px 5px ; }
@@ -211,7 +225,7 @@ textPath::selection {background: none; }
     .main-wrapper .wrapper-info .box-aboutUs .box-content .image img{ width: 100%; }
     .main-wrapper .wrapper-info .box-aboutUs .box-content .content{ width: 100%; padding: 15px; margin: 0; }
 
-    .main-wrapper .wrapper-info .box-partner .box-title{ padding: 24px 16px; font-size: 32px; line-height: 32px; }
+    .main-wrapper .wrapper-info .box-partner .box-title .title{ padding: 24px 16px; font-size: 32px; line-height: 32px; }
     .main-wrapper .wrapper-info .box-partner .desc{ padding: 24px 16px; font-size: 16px; line-height: 16px; }
     .main-wrapper .wrapper-info .box-partner .desc .text{ font-size: 14px; line-height: 20px; }
 	.main-wrapper .wrapper-info .box-partner .list-item .item{ width: calc(25% - 1px); }
@@ -226,7 +240,7 @@ textPath::selection {background: none; }
     .main-wrapper .wrapper-info .box-ourWorks .item .info .client span{ font-size: 10px; line-height: 10px; }
     .main-wrapper .wrapper-info .box-ourWorks .view-more{ padding: 16px; font-size: 16px; line-height: 24px; border-left: 0; }
 
-    .main-wrapper .wrapper-info .box-contact .box-title{ font-size: 32px; line-height: 32px; padding: 28px 16px; }
+    .main-wrapper .wrapper-info .box-contact .box-title .title{ font-size: 32px; line-height: 32px; padding: 28px 16px; }
     .main-wrapper .wrapper-info .box-contact .box-content .item{ padding: 16px; font-size: 16px; line-height: 16px; }
     .main-wrapper .wrapper-info .box-contact .box-content .item .desc{ font-size: 14px; line-height: 20px; }
 
@@ -234,7 +248,8 @@ textPath::selection {background: none; }
 
     .accordion-content{ background: #000; width: 95%; left: 2.5%; top: 10%; border-radius: 5px; }
 
-    .close-popup{ text-align: center; }
+    .close-popup{ text-align: center; display: inline-block; padding: 20px 0 40px; width: 100%; }
+    .close-popup:hover{ cursor: pointer; }
 
     .box-menu-mobile{ z-index: 1000; background: #ffcc00; border-radius: 5px; position: fixed; bottom: 1%; width: 95%; left: 2.5%; }
     .box-menu-mobile li, .box-menu-mobile .first-menu img{ width: 100%; border-radius: 5px; }
@@ -255,3 +270,8 @@ textPath::selection {background: none; }
 
 
 } 
+
+@media screen and (max-width: 430px){
+    .main-wrapper .wrapper-info .box-team .box-title .title{ height: auto; font-size: 16px; line-height: 24px; padding: 12px;}
+    .main-wrapper .wrapper-info .box-team .box-title .title:before{ right: 20px; }
+}
